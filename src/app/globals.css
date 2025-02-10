@@ -19,3 +19,18 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.swiper-button-prev {
+  background-color: rgba(71, 71, 71, 0.6);
+  color: white !important;
+  width: 90px !important;
+  height: 90px !important;
+  border-radius: 100%;
+}
+.swiper-button-next {
+  background-color: rgba(71, 71, 71, 0.6);
+  color: white !important;
+  width: 90px !important;
+  height: 90px !important;
+  border-radius: 100%;
+}
