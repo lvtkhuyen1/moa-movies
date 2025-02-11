@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import Image, { StaticImageData } from "next/image";
 import squidgame from "@/asset/movies/squid-game.png";
 import deadpool from "@/asset/movies/deadpool.png";
@@ -41,30 +41,28 @@ export default function MovieBanner() {
       <p className="w-full bg-[#FFBB00] text-black font-semibold text-sm md:text-lg flex items-center p-2 md:p-4 my-2 md:my-3 md:m-0">
         공지사항
       </p>
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination, Navigation]}
-        navigation={true}
-        loop
-      >
-        {movies.map((movie) => (
-          <SwiperSlide key={movie.id}>
-            <div className="relative">
-              <Image
-                src={movie.image}
-                alt={movie.alt}
-                width={1098}
-                height={1598}
-                className="object-fill"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="hidden md:block">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          modules={[Navigation]}
+          navigation={true}
+          loop
+        >
+          {movies.map((movie) => (
+            <SwiperSlide key={movie.id}>
+              <div className="relative">
+                <Image
+                  src={movie.image}
+                  alt={movie.alt}
+                  width={1098}
+                  height={1598}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </>
   );
 }

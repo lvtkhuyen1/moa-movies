@@ -60,7 +60,7 @@ const Header: React.FC = () => {
           <Image src={logo} alt="logo" width={141} height={50} />
         </div>
         <div className="w-full flex gap-3 justify-end items-center mx-3">
-          <input className="w-full md:w-2/3 rounded-full bg-[#323232] text-center py-2"></input>
+          <input className="w-full md:w-[270px] rounded-full bg-[#323232] text-center py-1 md:py-2 text-sm md:text-base"></input>
           <Image
             src={search}
             alt="Search"
