@@ -19,7 +19,7 @@ export default function PaginationButton({
         disabled
           ? "opacity-50 cursor-not-allowed bg-gray-300 text-black"
           : isActive
-          ? "bg-[#FFBB34] text-white"
+          ? "bg-[#FFBB34] text-black"
           : "bg-[#313131] hover:bg-slate-600"
       }`}
     >

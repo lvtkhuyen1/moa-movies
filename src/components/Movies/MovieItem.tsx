@@ -1,20 +1,24 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 interface MovieItemProps {
-  image: string;
-  name: string;
-  title: string;
+  movieName: string;
+  movieTitle: string;
+  movieImage: string | StaticImageData;
 }
 
-export default function MovieItem({ image, name, title }: MovieItemProps) {
+export default function MovieItem({
+  movieImage,
+  movieName,
+  movieTitle,
+}: MovieItemProps) {
   return (
     <>
       <div className="py-3">
-        <Image src={image} className="rounded-lg" alt="" height={200} />
+        <Image src={movieImage} alt="Movie Name" height={0} width={300} />
       </div>
-      <div>{name}</div>
-      <div className="text-xs">{title}</div>
+      <div>{movieName}</div>
+      <div className="text-xs">{movieTitle}</div>
     </>
   );
 }

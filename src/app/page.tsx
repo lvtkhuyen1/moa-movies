@@ -1,9 +1,9 @@
 import HeaderCard from "@/components/HeaderCard";
 import Header from "../components/Header";
 import MovieBanner from "@/components/MovieBanner";
-import Category from "@/components/Category";
 import Footer from "@/components/Footer";
 import Menu from "@/components/Menu";
+import ListCategory from "@/components/MovieScroll";
 
 export default function Home() {
   return (
@@ -11,9 +11,7 @@ export default function Home() {
       <Header />
       <HeaderCard />
       <MovieBanner />
-      <Category title="Category" />
-      <Category title="Category" />
-      <Category title="Category" />
+      <ListCategory />
       <Footer />
       <Menu />
     </div>

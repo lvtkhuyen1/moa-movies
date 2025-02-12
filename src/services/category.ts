@@ -1,18 +1,22 @@
 import { customFetch } from "@/libs/helpers/customFetch";
-import { CategoriesResponse, CategoryDetailResponse } from "@/libs/type";
+import {
+  FetchCategoriesResponse,
+  FetchCategoryDetailResponse,
+} from "@/libs/type";
 
-export const handleCategories = async (): Promise<CategoriesResponse> => {
-  const res = await customFetch("/categories/", {
-    method: "GET",
-  });
-  return res as CategoriesResponse;
-};
+export const handleFetchCategories =
+  async (): Promise<FetchCategoriesResponse> => {
+    const res = await customFetch("/categories/", {
+      method: "GET",
+    });
+    return res as FetchCategoriesResponse;
+  };
 
-export const handleCategoriesByID = async (
+export const handleFetchCategoriesByID = async (
   id: number
-): Promise<CategoryDetailResponse> => {
+): Promise<FetchCategoryDetailResponse> => {
   const res = await customFetch(`/categories/${id}`, {
     method: "GET",
   });
-  return res as CategoryDetailResponse;
+  return res as FetchCategoryDetailResponse;
 };

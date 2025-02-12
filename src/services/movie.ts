@@ -1,9 +1,18 @@
 import { customFetch } from "@/libs/helpers/customFetch";
-import { MoviesResponse } from "@/libs/type";
+import { FetchMoviesResponse } from "@/libs/type";
 
-export const handleMovies = async (): Promise<MoviesResponse> => {
-  const res = await customFetch("/movies/", {
+export const handleFetchMovies = async (
+  page: number,
+  limit: number,
+  categoryId: number
+): Promise<FetchMoviesResponse> => {
+  const query = new URLSearchParams({
+    page: page.toString(),
+    limit: limit.toString(),
+    categoryId: categoryId.toString(),
+  }).toString();
+  const res = await customFetch(`/movies?${query}`, {
     method: "GET",
   });
-  return res as MoviesResponse;
+  return res as FetchMoviesResponse;
 };

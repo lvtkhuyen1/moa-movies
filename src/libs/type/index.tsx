@@ -11,12 +11,12 @@ export interface MovieType {
   image: string;
 }
 
-export interface CategoriesResponse {
+export interface FetchCategoriesResponse {
   data: CategoryType[];
   success: boolean;
 }
 
-export interface CategoryDetailResponse {
+export interface FetchCategoryDetailResponse {
   data: {
     id: number;
     name: string;
@@ -24,7 +24,7 @@ export interface CategoryDetailResponse {
   success: boolean;
 }
 
-export interface MoviesResponse {
+export interface FetchMoviesResponse {
   data: {
     movies: MovieType[];
     limit: number;
@@ -33,3 +33,5 @@ export interface MoviesResponse {
   };
   success: boolean;
 }
+
+export const ITEMS_PER_PAGE = 10;
