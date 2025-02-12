@@ -24,6 +24,8 @@ const movies = [
 
 interface CategoryProps {
   title: string;
+  id: number;
+  name: string;
 }
 
 export default function Category({ title }: CategoryProps) {
