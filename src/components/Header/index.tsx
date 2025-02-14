@@ -25,7 +25,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs, onCategorySelect }) => {
   );
 
   return (
-    <div className="hidden md:flex flex-row gap-8">
+    <div className="hidden md:flex flex-row">
       {tabs.map((tab) => (
         <Link key={tab.id} href={tab.url}>
           <button
